@@ -38,3 +38,4 @@ const app = new cdk.App();
 // });
 
 new MyPipelineStack(app, "pipeline-demo", {})
+app.synth()
