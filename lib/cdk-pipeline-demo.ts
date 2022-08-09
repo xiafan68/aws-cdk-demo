@@ -11,7 +11,8 @@ export class MyPipelineStack extends cdk.Stack {
       pipelineName: 'MyPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('xiafan68/aws-cdk-demo', 'master'),
-        commands: ['npm ci', 'npm run build', 'npx cdk synth']
+        // commands: ['npm ci', 'npm run build', 'npx cdk synth']
+        commands: ['npm run build', 'npx cdk synth']
       })
     });
     pipeline.addStage(new MyPipelineAppStage(this, "test", {}))
